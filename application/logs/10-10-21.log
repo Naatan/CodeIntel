@@ -1,0 +1,65 @@
+INFO - 10-10-21 21:03:00 --> codeintel initialized
+INFO - 10-10-21 21:03:34 --> codeintel initialized
+INFO - 10-10-21 21:04:04 --> codeintel initialized
+INFO - 10-10-21 21:06:50 --> codeintel initialized
+INFO - 10-10-21 21:07:28 --> codeintel initialized
+INFO - 10-10-21 21:18:15 --> codeintel initialized
+INFO - 10-10-21 21:18:25 --> codeintel initialized
+INFO - 10-10-21 21:19:04 --> codeintel initialized
+INFO - 10-10-21 21:19:10 --> codeintel initialized
+INFO - 10-10-21 21:21:23 --> codeintel initialized
+INFO - 10-10-21 21:22:20 --> codeintel initialized
+INFO - 10-10-21 21:22:48 --> codeintel initialized
+INFO - 10-10-21 21:30:32 --> codeintel initialized
+INFO - 10-10-21 22:07:58 --> codeintel initialized
+INFO - 10-10-21 22:08:07 --> codeintel initialized
+INFO - 10-10-21 22:10:20 --> codeintel initialized
+INFO - 10-10-21 22:10:25 --> codeintel initialized
+INFO - 10-10-21 22:11:14 --> codeintel initialized
+INFO - 10-10-21 22:11:20 --> codeintel initialized
+INFO - 10-10-21 22:11:36 --> codeintel initialized
+INFO - 10-10-21 22:11:52 --> codeintel initialized
+INFO - 10-10-21 22:12:06 --> codeintel initialized
+INFO - 10-10-21 22:12:50 --> codeintel initialized
+INFO - 10-10-21 22:13:16 --> codeintel initialized
+INFO - 10-10-21 22:13:41 --> codeintel initialized
+INFO - 10-10-21 22:14:09 --> codeintel initialized
+INFO - 10-10-21 22:14:24 --> codeintel initialized
+INFO - 10-10-21 22:14:30 --> codeintel initialized
+INFO - 10-10-21 22:15:07 --> codeintel initialized
+INFO - 10-10-21 22:15:32 --> codeintel initialized
+INFO - 10-10-21 22:16:29 --> codeintel initialized
+INFO - 10-10-21 22:19:10 --> codeintel initialized
+INFO - 10-10-21 22:19:32 --> codeintel initialized
+INFO - 10-10-21 22:19:32 --> Loaded type libraries: config
+INFO - 10-10-21 22:21:24 --> codeintel initialized
+INFO - 10-10-21 22:21:24 --> Loaded library: config
+INFO - 9.153162ms) --> codeintel initialized
+INFO - 9.153162ms) --> Loaded library: config
+INFO - -1287714214.21ms) --> codeintel initialized
+INFO - -1287714214.21ms) --> Loaded library: config
+INFO - 10-10-21 22:24:17 (0ms) --> codeintel initialized
+INFO - 10-10-21 22:24:17 (0ms) --> Loaded library: config
+INFO - 10-10-21 22:25:12 (0ms) --> codeintel initialized
+INFO - 10-10-21 22:25:12 (0ms) --> Loaded library: config
+INFO - 10-10-21 22:25:37 (0.004673ms) --> codeintel initialized
+INFO - 10-10-21 22:25:37 (0.004673ms) --> Loaded library: config
+INFO - 10-10-21 22:26:13 (0.004658) --> codeintel initialized
+INFO - 10-10-21 22:26:13 (0.004658) --> Loaded library: config
+INFO - 0.00804 - 10-10-21 22:29:48 --> codeintel initialized
+INFO - 0.008521 - 10-10-21 22:29:48 --> Loaded library: config
+INFO - 0.006811 - 10-10-21 22:50:24 --> codeintel initialized
+INFO - 0.000985 - 10-10-21 22:50:56 --> codeintel initialized
+INFO - 0.000647 - 10-10-21 22:51:06 --> codeintel initialized
+INFO - 0.000797 - 10-10-21 22:51:24 --> codeintel initialized
+INFO - 0.00066 - 10-10-21 22:51:29 --> codeintel initialized
+INFO - 0.004432 - 10-10-21 22:52:42 --> codeintel initialized
+DEBUG - 0.00709 - 10-10-21 22:52:42 --> Database Driver Class Initialized
+ERROR - 0.009594 - 10-10-21 22:52:42 --> Unable to connect to the database
+INFO - 0.000854 - 10-10-21 22:56:49 --> codeintel initialized
+DEBUG - 0.008456 - 10-10-21 22:56:49 --> Database Driver Class Initialized
+ERROR - 0.009005 - 10-10-21 22:56:49 --> Unable to connect to the database
+INFO - 0.00098 - 10-10-21 22:57:10 --> codeintel initialized
+DEBUG - 0.003597 - 10-10-21 22:57:10 --> Database Driver Class Initialized
+INFO - 0.001051 - 10-10-21 22:57:30 --> codeintel initialized
+DEBUG - 0.006956 - 10-10-21 22:57:30 --> Database Driver Class Initialized
