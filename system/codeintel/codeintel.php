@@ -1,7 +1,9 @@
 <?php
 
-require_once BASEPATH . 'libraries/load.php';
-require_once BASEPATH . 'helpers/base.php';
+namespace ci\sys;
+
+require_once BASEPATH . 'libraries/load'.EXT;
+require_once BASEPATH . 'helpers/base'.EXT;
 
 class codeintel {
 	
@@ -10,7 +12,7 @@ class codeintel {
 	public $input;
 	
 	public function __construct() {
-		log_message('info','codeintel initialized');
+		$this->load 	= new \ci\sys\libs\load;
 	}
 	
 	public function __get($name) {
@@ -37,14 +39,13 @@ class codeintel {
 		}
 	}
 	
-	public function init() {
-		$this->load 	= new load;
-	}
-	
 }
 
-$CI = get_instance();
-$CI->init();
+global $CI;
+$CI = new \ci\sys\codeintel;
+log_message('info','codeintel initialized');
 
-$r = $CI->db->query("SELECT * FROM user_profiles");
-var_dump($r->result());
+log_message('DEBUG','Test 123');
+log_message('DEBUG','Test 123');
+
+$CI->lib->config->test();

@@ -2,21 +2,19 @@
 
 function get_instance() {
 	global $CI;
-	
-	if ($CI == null)
-		$CI = new codeintel;
-		
 	return $CI;
 }
 
 function show_error($message,$status_code=500) {
 	$heading = 'Error Occured';
 	
-	require_once APPPATH . 'errors/error_general.php';
+	require_once APPPATH . 'errors/error_general'.EXT;
 }
 
 function log_message($level,$message) {
 	static $config = null;
+	
+	$CI =& get_instance();
 	
 	if ($config == null)
 		require APPPATH . 'config/logging' . EXT;
@@ -27,14 +25,17 @@ function log_message($level,$message) {
 		case 'INFO':
 			if ($config['log_level']!='INFO')
 				return false;
+			if ($CI!==null) $CI->lib->fb->info($message);
 			break;
 		case 'DEBUG':
 			if (!in_array($config['log_level'],array('INFO','DEBUG')))
 				return false;
+			if ($CI!==null) $CI->lib->fb->log($message);
 			break;
 		case 'ERROR':
 			if (!in_array($config['log_level'],array('INFO','DEBUG','ERROR')))
 				return false;
+			if ($CI!==null) $CI->lib->fb->error($message);
 			break;
 		default:
 			return false;
@@ -46,11 +47,12 @@ function log_message($level,$message) {
 		return false;
 	
 	$file = $path . $config['log_file'];
-	$line = 	$level . $config['log_level_seperator'] .
-				($config['log_prepend_microtime'] ? microtime()-STARTTIME . $config['log_level_seperator'] : '') .
-				$config['log_line_prepend'] . $message . $config['log_line_append'];
+	$line = $level . $config['log_level_seperator'] .
+			($config['log_prepend_microtime'] ? microtime()-STARTTIME . $config['log_level_seperator'] : '') .
+			$config['log_line_prepend'] . $message . $config['log_line_append'];
 	
 	file_put_contents($file,$line,FILE_APPEND);
+	
 }
 
 /**

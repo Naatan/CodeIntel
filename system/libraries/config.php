@@ -1,6 +1,6 @@
 <?php
 
-namespace libraries;
+namespace ci\sys\libs;
 
 class config {
 	
