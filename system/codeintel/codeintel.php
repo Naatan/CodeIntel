@@ -45,10 +45,16 @@ class codeintel {
 
 global $CI;
 $CI = new \ci\sys\codeintel;
-log_message('info','codeintel initialized');
+log_message('info','CodeIntel initialized');
 
 log_message('DEBUG','Test 123');
 log_message('DEBUG','Test 123');
 
-$CI->config->test();
-$CI->config->test();
+var_dump( $CI->config->logging->log_filter );
+
+$logging = $CI->config->load('logging');
+var_dump( $logging );
+
+var_dump( $CI->config->item('log_filter') );
+var_dump( $CI->config->item('log_filter', 'logging') );
+//$CI->config->logging['log_filter'];
