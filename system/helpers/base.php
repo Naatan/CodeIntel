@@ -21,25 +21,24 @@ function log_message($level,$message) {
 		
 	$level = strtoupper($level);
 	
-	switch ($level) {
-		case 'INFO':
-			if ($config['log_level']!='INFO')
-				return false;
-			if ($CI!==null) $CI->lib->fb->info($message);
-			break;
-		case 'DEBUG':
-			if (!in_array($config['log_level'],array('INFO','DEBUG')))
-				return false;
-			if ($CI!==null) $CI->lib->fb->log($message);
-			break;
-		case 'ERROR':
-			if (!in_array($config['log_level'],array('INFO','DEBUG','ERROR')))
-				return false;
-			if ($CI!==null) $CI->lib->fb->error($message);
-			break;
-		default:
-			return false;
-			break;
+	if ( ! in_array($level,$config['log_filter']))
+		return false;
+	
+	if ($CI!==null) {
+		switch ($level) {
+			case 'INFO':
+				$CI->lib->fb->info($message);
+				break;
+			case 'WARNING':
+				$CI->lib->fb->warn($message);
+				break;
+			case 'ERROR':
+				$CI->lib->fb->error($message);
+				break;
+			default:
+				$CI->lib->fb->log($level . ': ' .$message);
+				break;
+		}
 	}
 	
 	$path = APPPATH . $config['log_path'];

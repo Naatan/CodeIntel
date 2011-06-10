@@ -1,7 +1,7 @@
 <?php
 
-/* ERROR > DEBUG > INFO */
-$config['log_level']			= 'INFO';
+/* ERROR > WARNING > DEBUG > INFO */
+$config['log_filter']			= array('INFO','DEBUG','WARNING','ERROR');
 
 /* Relative to the Application path */
 $config['log_path']				= 'logs/';
