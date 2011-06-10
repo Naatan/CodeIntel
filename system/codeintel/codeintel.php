@@ -2,17 +2,15 @@
 
 namespace ci\sys;
 
-require_once BASEPATH . 'libraries/load'.EXT;
+require_once BASEPATH . 'libraries/loader'.EXT;
 require_once BASEPATH . 'helpers/base'.EXT;
 
 class codeintel {
 	
 	public $load;
-	public $config;
-	public $input;
 	
 	public function __construct() {
-		$this->load 	= new \ci\sys\libs\load;
+		$this->load 	= new \ci\sys\libs\loader;
 	}
 	
 	public function __get($name) {
@@ -29,6 +27,10 @@ class codeintel {
 			case 'model':
 				$this->load->set_upcoming_type('model');
 				return $this->load;
+				break;
+			case 'config':
+				$this->load->set_upcoming_type('config');
+				return $this->load->config();
 				break;
 			case 'db':
 				return $this->load->db();
@@ -48,4 +50,5 @@ log_message('info','codeintel initialized');
 log_message('DEBUG','Test 123');
 log_message('DEBUG','Test 123');
 
-$CI->lib->config->test();
+$CI->config->test();
+$CI->config->test();

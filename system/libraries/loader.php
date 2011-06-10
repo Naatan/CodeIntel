@@ -2,7 +2,7 @@
 
 namespace ci\sys\libs;
 
-class load {
+class loader {
 	
 	private $libraries 	= array();
 	private $views 		= array();
@@ -39,6 +39,10 @@ class load {
 		return $this->load_file($location,'views','view');
 	}
 	
+	public function config() {
+		return $this->library('config');
+	}
+	
 	public function db() {
 		if ($this->db!=null)
 			return $this->db;
@@ -71,7 +75,7 @@ class load {
 		if ( ! class_exists($class))
 			return show_error("Could not load $type_singular: ".$name);
 			
-		$this->{$type}[$name] = new $class;
+		$this->{$type}[$name] = new loader_class_wrapper(new $class);
 		
 		if ( ! in_array($name,array('fb')))
 			log_message('info',"Loaded $type_singular: $name");
@@ -81,6 +85,32 @@ class load {
 	
 	public function set_upcoming_type($type) {
 		$this->upcoming_type = $type;
+	}
+	
+}
+
+class loader_class_wrapper {
+	
+	private $_class;
+	
+	function __construct($class) {
+		$this->_class = $class;
+	}
+	
+	function __call($method,$args) {
+		return call_user_func_array(array($this->_class,$method),$args);
+	}
+	
+	function __get($var) {	
+		return $this->_class->{$var};
+	}
+	
+	function __set($var,$value) {
+		return $this->_class->{$var} = $value;
+	}
+	
+	function __isset($var) {
+		return isset($this->_class->{$var});
 	}
 	
 }
